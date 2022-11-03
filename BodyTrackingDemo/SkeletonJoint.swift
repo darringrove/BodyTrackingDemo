@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SkeletonJoint.swift
 //  BodyTracking
 //
 //  Created by Ryan Kopinsky on 6/16/22.
@@ -28,17 +28,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-import SwiftUI
+import Foundation
 
-struct ContentView: View {
-    var body: some View {
-        ARViewContainer()
-            .edgesIgnoringSafeArea(.all)
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+struct SkeletonJoint {
+    let name: String
+    var position: SIMD3<Float>
 }

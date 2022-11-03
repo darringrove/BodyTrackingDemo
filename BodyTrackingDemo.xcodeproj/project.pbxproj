@@ -11,6 +11,11 @@
 		E03AA2BF2910804F000A678C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AA2BE2910804F000A678C /* ContentView.swift */; };
 		E03AA2C129108050000A678C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03AA2C029108050000A678C /* Assets.xcassets */; };
 		E03AA2C429108050000A678C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E03AA2C329108050000A678C /* Preview Assets.xcassets */; };
+		E03AA2CB29108112000A678C /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AA2CA29108112000A678C /* ARViewContainer.swift */; };
+		E03AA2CD29108186000A678C /* BodySkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AA2CC29108186000A678C /* BodySkeleton.swift */; };
+		E03AA2CF291081C5000A678C /* Bones.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AA2CE291081C5000A678C /* Bones.swift */; };
+		E03AA2D1291081F4000A678C /* SkeletonBone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AA2D0291081F4000A678C /* SkeletonBone.swift */; };
+		E03AA2D32910820E000A678C /* SkeletonJoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E03AA2D22910820E000A678C /* SkeletonJoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		E03AA2BE2910804F000A678C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E03AA2C029108050000A678C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E03AA2C329108050000A678C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E03AA2CA29108112000A678C /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		E03AA2CC29108186000A678C /* BodySkeleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodySkeleton.swift; sourceTree = "<group>"; };
+		E03AA2CE291081C5000A678C /* Bones.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bones.swift; sourceTree = "<group>"; };
+		E03AA2D0291081F4000A678C /* SkeletonBone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonBone.swift; sourceTree = "<group>"; };
+		E03AA2D22910820E000A678C /* SkeletonJoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonJoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				E03AA2BC2910804F000A678C /* BodyTrackingDemoApp.swift */,
 				E03AA2BE2910804F000A678C /* ContentView.swift */,
+				E03AA2CC29108186000A678C /* BodySkeleton.swift */,
+				E03AA2CE291081C5000A678C /* Bones.swift */,
+				E03AA2D0291081F4000A678C /* SkeletonBone.swift */,
+				E03AA2D22910820E000A678C /* SkeletonJoint.swift */,
+				E03AA2CA29108112000A678C /* ARViewContainer.swift */,
 				E03AA2C029108050000A678C /* Assets.xcassets */,
 				E03AA2C229108050000A678C /* Preview Content */,
 			);
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03AA2CD29108186000A678C /* BodySkeleton.swift in Sources */,
 				E03AA2BF2910804F000A678C /* ContentView.swift in Sources */,
+				E03AA2D1291081F4000A678C /* SkeletonBone.swift in Sources */,
 				E03AA2BD2910804F000A678C /* BodyTrackingDemoApp.swift in Sources */,
+				E03AA2CF291081C5000A678C /* Bones.swift in Sources */,
+				E03AA2D32910820E000A678C /* SkeletonJoint.swift in Sources */,
+				E03AA2CB29108112000A678C /* ARViewContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +290,7 @@
 				DEVELOPMENT_TEAM = 6UU9KK26JZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is needed for body tracking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +320,7 @@
 				DEVELOPMENT_TEAM = 6UU9KK26JZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera access is needed for body tracking";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SkeletonBone.swift
 //  BodyTracking
 //
 //  Created by Ryan Kopinsky on 6/16/22.
@@ -28,17 +28,18 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-import SwiftUI
+import Foundation
+import RealityKit
 
-struct ContentView: View {
-    var body: some View {
-        ARViewContainer()
-            .edgesIgnoringSafeArea(.all)
+struct SkeletonBone {
+    var fromJoint: SkeletonJoint
+    var toJoint: SkeletonJoint
+    
+    var centerPosition: SIMD3<Float> {
+        [(fromJoint.position.x + toJoint.position.x)/2, (fromJoint.position.y + toJoint.position.y)/2, (fromJoint.position.z + toJoint.position.z)/2]
     }
-}
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    var length: Float {
+        simd_distance(fromJoint.position, toJoint.position)
     }
 }
